@@ -39,3 +39,19 @@ h1, h2, h3, h4, h5, h6, p {
 .scroll_hidden::-webkit-scrollbar {
   display: none; /* Chrome, Safari, Opera*/
 }
+
+.pc_layout {
+  display: none;
+}
+.m_layout {
+  display: block;
+  width: 100%;
+}
+@media screen and (min-width:973px) {
+  .pc_layout {
+    display: block;
+  }  
+  .m_layout {
+    display: none;
+  }
+}
