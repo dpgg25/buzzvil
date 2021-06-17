@@ -16,10 +16,16 @@ header .hd_wrap {
 header .hd_wrap.scroll {
   background-color: #fff;
 }
-header .m_layout .logo > a {
+header .hd_wrap .logo > a {
   background: url('../img/logo_white.png') no-repeat;
   background-size: 26.81vw 5vw;
   display: inline-block;  
+  width: 26.81vw;
+  height: 5vw;
+}
+header .hd_wrap.scroll .logo > a {
+  background: url('../img/logo_red.png') no-repeat;
+  background-size: 26.81vw 5vw;
   width: 26.81vw;
   height: 5vw;
 }
@@ -29,12 +35,6 @@ header .ham_menu {
   width: 5.56vw;
   height: 4.03vw;
   cursor: pointer;
-}
-header .hd_wrap.scroll .logo > a {
-  background: url('../img/logo_red.png') no-repeat;
-  background-size: 26.81vw 5vw;
-  width: 26.81vw;
-  height: 5vw;
 }
 header .hd_wrap.scroll .ham_menu {
   background: url('../img/mobile/m_menuBtn_on.png') no-repeat;
@@ -52,7 +52,7 @@ header .m_layout .gnb_wrap.on {
   left: 0;
   transition: all 0.3s;
 }
-header .logo_wrap {
+header .m_layout .logo_wrap {
   box-sizing: border-box;
   height: 100%;
   display: flex;
@@ -61,11 +61,11 @@ header .logo_wrap {
   padding: 4.44vw 5.56vw;
   border-bottom: 1px solid #eee;
 }
-header .logo_wrap .logo img {
+header .m_layout .logo_wrap .logo img {
   width: 26.81vw;
   height: 5vw;
 }
-header .logo_wrap .ham_menu > img {
+header .m_layout .logo_wrap .ham_menu > img {
   width: 4.03vw;
 }
 header .gnb_menu {
