@@ -1,7 +1,7 @@
 const html = document.querySelector('html');
 const body = document.querySelector('body');
 const openhamBtn = document.querySelector('.m_layout .hd_wrap .ham_menu');
-const closehamBtn = document.querySelector('.m_layout .gnb_wrap .ham_menu');
+const closehamBtn = document.querySelector('.m_layout .gnb_wrap .logo_wrap > img');
 const gnbMenu = document.querySelector('.m_layout .gnb_wrap');
 const gnbfirstUl = document.querySelector('.m_layout .gnb_wrap .gnb_menu > ul');
 const gnbA = document.querySelector('.m_layout .gnb_wrap .gnb_menu > ul > li > a');
@@ -23,6 +23,7 @@ function closeHam() {
   gnbMenu.classList.remove('on');
 }
 
+headerbarToggle();
 function headerbarToggle() {
   var topScroll = headerbar.offsetTop;
   var currentScroll = window.pageYOffset;

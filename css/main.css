@@ -5,6 +5,7 @@ main .pc_img {
   width: 100%;
   min-width: 470px;
   height: 100vh;
+  position: relative;
 }
 .main_visual > ul {
   position: absolute;
@@ -48,6 +49,9 @@ main .pc_img {
   -moz-transform: translate(-50%,-50%);
   -o-transform: translate(-50%,-50%);
   transform: translate(-50%,-50%);
+}
+.main_visual .img_wrap img {
+  min-width: 495px;
 }
 .main_visual .text_box {
   width: 90%;
@@ -126,6 +130,14 @@ main .pc_img {
 .main_visual .text_box button:hover::after {
   width: 100%;
   z-index: -1;
+}
+.main_visual .slide_btn {
+  position: absolute;
+  bottom: 20vw;
+  left: 50%;
+}
+.main_visual .slide_btn > * {
+  display: inline-block;
 }
 .main_reward {
   /* position: relative; */
@@ -221,11 +233,85 @@ main .m_layout {
   -o-transform: translate(-50%,-50%);
   transform: translate(-50%,-50%);
 }
-
-@media screen and (min-width:771px) and (max-width:972px) {
+.main_ad .text_wrap {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+  -moz-transform: translate(-50%,-50%);
+  -o-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  text-align: center;
+}
+.main_ad .text_wrap > img {
+  width: 13vw;
+}
+.main_ad .text_wrap > h4 {
+  font-size: 5.5vw;
+  line-height: 1.3;
+  font-weight: 500;
+  color: #fff;
+  margin: 4vw 0;
+}
+.main_ad .text_wrap > p {
+  font-size: 3.6vw;
+  line-height: 1.4;
+  font-weight: 400;
+  color: #fff;
+  opacity: 0.7;
+  margin-bottom: 4vw;
+}
+.main_ad .text_wrap > button {
+  position: relative;
+  width: 8.3vw;
+  height: 8.3vw;
+  background-color: #f44336;
+  border-radius: 50%;
+}
+.main_ad .text_wrap > button > img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+  -moz-transform: translate(-50%,-50%);
+  -o-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
 }
 
-@media screen and (min-width:973px) {
+
+@media screen and (min-width:771px) and (max-width:1079px) {
+  main .pc_img {
+    display: none;
+  }
+  .main_visual .text_box {
+    width: 100%;
+  }
+  .main_visual .text_box h2 {
+    font-size: 70px;
+    margin-bottom: 35px;
+  }
+  .main_visual .text_box p {
+    font-size: 17px;
+  }
+  .main_visual .text_box button {
+    width: 180px;
+    height: 48px;
+    padding: unset;
+    font-size: 16px;
+    top: 150%;
+  }
+}
+
+@media screen and (min-width:1080px) {
+  main .pc_layout {
+    display: block;
+  }  
+  main .m_layout {
+    display: none;
+  }
   main .pc_img {
     display: block;
   }  
