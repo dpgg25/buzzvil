@@ -55,6 +55,8 @@ header .m_layout .gnb_wrap.on {
 header .m_layout .logo_wrap {
   box-sizing: border-box;
   height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -237,12 +239,6 @@ header .gnb_menu_bottom .lang span {
 @media screen and (min-width:1080px) {
   header .hd_wrap {
     height: 100px;
-    box-sizing: border-box;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     padding: unset;
   }
   header .hd_wrap.scroll {
@@ -251,6 +247,9 @@ header .gnb_menu_bottom .lang span {
   header .hd_wrap .logo {
     width: 161px;
     height: 30px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
   }
   header .hd_wrap .logo > a {
     background: url('../img/logo_white.png') no-repeat;
@@ -265,15 +264,85 @@ header .gnb_menu_bottom .lang span {
     width: 26.81vw;
     height: 5vw;
   }
-  header .ham_menu {
-    background: url('../img/mobile/m_menuBtn.png') no-repeat;
-    background-size: 5.56vw 4.03vw;
-    width: 5.56vw;
-    height: 4.03vw;
+  header .gnb_wrap {
+    margin: 0 20px;
+  }
+  header .gnb_wrap > ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-left: 15px;
+  }
+  header .gnb_wrap > ul > li {
+  }
+  header .gnb_wrap ul li >  a {
+    padding: 0 25px;
+  }
+  header .gnb_wrap > ul > li > ul {
+    display: none;
+  }
+  header .gnb_wrap a {    
+    font-size: 18px;
+    color: #fff;
+  }
+  header .gnb_menu {
+    padding: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  header .gnb_menu > ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-right: 110px;
+  }
+  header .gnb_menu > ul > li {
+    margin-bottom: unset;
+  }
+  header .gnb_menu > ul > li > a {
+    display: unset;
+    font-size: 18px;
+    font-weight: unset;
+  }
+  header .gnb_menu .lang {
+    width: 80px;
+    border-radius: 15px;
+    position: absolute;
+    right: 15px;
+    border: 1px solid #fff;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  header .gnb_menu .lang > ul {
+    display: none;
+  }
+  header .gnb_menu .lang > ul.on {
+    display: block;
+  }
+  header .gnb_menu .lang .arrow {
+    box-sizing: border-box;
+    background: url('../img/lang_arrow_d.png') right 3px center no-repeat;
+    background-size: 10px auto;
+    padding-left: 12px;
+    padding-right: 25px;
     cursor: pointer;
   }
-  header .hd_wrap.scroll .ham_menu {
-    background: url('../img/mobile/m_menuBtn_on.png') no-repeat;
-    background-size: 5.56vw 4.03vw;
+  header .gnb_menu .lang .arrow.on {
+    background-image: url('../img/lang_arrow_u.png');
+  } /*여기 on되면 lang에 display block */
+  header .gnb_menu .lang .arrow a {
+    line-height: 30px;
+    font-size: 13px;
+    font-weight: 300;
+  }
+  header .gnb_menu .lang > ul a {
+    line-height: 30px;
+    font-size: 13px;
+    font-weight: 300;
+    padding: 0;
+    padding-left: 12px;
+    padding-right: 25px;
   }
 }
