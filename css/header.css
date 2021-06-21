@@ -13,7 +13,7 @@ header .hd_wrap {
   align-items: center;
   padding: 5.56vw;
 }
-header .hd_wrap.scroll {
+header .hd_wrap.on {
   background-color: #fff;
 }
 header .hd_wrap .logo > a {
@@ -23,7 +23,7 @@ header .hd_wrap .logo > a {
   width: 26.8vw;
   height: 5vw;
 }
-header .hd_wrap.scroll .logo > a {
+header .hd_wrap.on .logo > a {
   background: url('../img/logo_red.png') no-repeat;
   background-size: 26.8vw 5vw;
   width: 26.8vw;
@@ -36,7 +36,7 @@ header .ham_menu {
   height: 4vw;
   cursor: pointer;
 }
-header .hd_wrap.scroll .ham_menu {
+header .hd_wrap.on .ham_menu {
   background: url('../img/mobile/m_menuBtn_on.png') no-repeat;
   background-size: 5.56vw 4vw;
 }
@@ -186,7 +186,7 @@ header .gnb_menu_bottom .lang span {
     width: 193px;
     height: 36px;
   }
-  header .hd_wrap .logo > a, header .hd_wrap.scroll .logo > a {
+  header .hd_wrap .logo > a, header .hd_wrap.on .logo > a {
     background-size: 100% 100%;
     width: 100%;
     height: 100%;
@@ -196,7 +196,7 @@ header .gnb_menu_bottom .lang span {
     height: 29px;
     background-size: 40px 29px;
   }
-  header .hd_wrap.scroll .ham_menu {
+  header .hd_wrap.on .ham_menu {
     background-size: 40px 29px;
   }
   header .m_layout .logo_wrap {
@@ -241,7 +241,7 @@ header .gnb_menu_bottom .lang span {
     height: 100px;
     padding: unset;
   }
-  header .hd_wrap.scroll {
+  header .hd_wrap.on {
     background-color: #fff;
   }
   header .hd_wrap .logo {
@@ -258,11 +258,11 @@ header .gnb_menu_bottom .lang span {
     width: 100%;
     height: 100%;
   }
-  header .hd_wrap.scroll .logo > a {
+  header .hd_wrap.on .logo > a {
     background: url('../img/logo_red.png') no-repeat;
-    background-size: 26.81vw 5vw;
-    width: 26.81vw;
-    height: 5vw;
+    background-size: 100% 100%;
+    width: 100%;
+    height: 100%;
   }
   header .gnb_wrap {
     margin: 0 20px;
@@ -273,7 +273,8 @@ header .gnb_menu_bottom .lang span {
     display: flex;
     margin-left: 15px;
   }
-  header .gnb_wrap > ul > li {
+  header .hd_wrap.on .gnb_wrap > ul > li > a, header .hd_wrap.on .gnb_menu > ul > li > a {
+    color: #222;
   }
   header .gnb_wrap ul li >  a {
     padding: 0 25px;
@@ -314,6 +315,11 @@ header .gnb_menu_bottom .lang span {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    flex-direction: column;
+  }
+  header .hd_wrap.on .gnb_menu .lang {
+    border: 1px solid #bbb;
+    background-color: #fff;
   }
   header .gnb_menu .lang > ul {
     display: none;
@@ -323,7 +329,7 @@ header .gnb_menu_bottom .lang span {
   }
   header .gnb_menu .lang .arrow {
     box-sizing: border-box;
-    background: url('../img/lang_arrow_d.png') right 3px center no-repeat;
+    background: url('../img/lang_arrow_d.png') right 8px center no-repeat;
     background-size: 10px auto;
     padding-left: 12px;
     padding-right: 25px;
@@ -331,18 +337,24 @@ header .gnb_menu_bottom .lang span {
   }
   header .gnb_menu .lang .arrow.on {
     background-image: url('../img/lang_arrow_u.png');
-  } /*여기 on되면 lang에 display block */
-  header .gnb_menu .lang .arrow a {
+  }
+  header .hd_wrap.on .gnb_menu .lang .arrow {    
+    background: url('../img/langOn_arrow_d.png') right 8px center no-repeat;
+  }
+  header .hd_wrap.on .gnb_menu .lang .arrow.on {    
+    background: url('../img/langOn_arrow_u.png') right 8px center no-repeat;
+  }
+  header .gnb_menu .lang a {
     line-height: 30px;
     font-size: 13px;
     font-weight: 300;
   }
   header .gnb_menu .lang > ul a {
-    line-height: 30px;
-    font-size: 13px;
-    font-weight: 300;
     padding: 0;
     padding-left: 12px;
     padding-right: 25px;
+  }
+  header .hd_wrap.on .gnb_menu .lang a {
+    color: #666;
   }
 }
