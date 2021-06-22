@@ -42,6 +42,7 @@ main .pc_img {
   position: absolute;
   top: 0;
   left: 0;
+  width: 100%;
   max-width: 100%;
   min-width: 495px;
   height: auto;
@@ -340,10 +341,10 @@ main .pc_img {
     display: none;
   }
   .main_visual {
-    height: 62vh;
+    height: 100vh;
   }
   .main_visual > ul > li {
-    height: 62vh;
+    height: 100%;
   }
   .main_visual .text_box > h2 {
     font-size: 70px;
