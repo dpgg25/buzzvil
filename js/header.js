@@ -4,8 +4,8 @@ const openhamBtn = document.querySelector('.m_layout .hd_wrap .ham_menu');
 const closehamBtn = document.querySelector('.m_layout .gnb_wrap .logo_wrap > img');
 const gnbMenu = document.querySelector('.m_layout .gnb_wrap');
 const gnbfirstUl = document.querySelector('.m_layout .gnb_wrap .gnb_menu > ul');
-const gnbA = document.querySelector('.m_layout .gnb_wrap .gnb_menu > ul > li > a');
-const gnbsecondUl = document.querySelector('.m_layout .gnb_wrap .gnb_menu > ul > li > ul');
+const gnbA = document.querySelectorAll('.m_layout .gnb_wrap .gnb_menu > ul > li > .gnb_open');
+const gnbOpenUl = document.querySelectorAll('.m_layout .gnb_wrap .gnb_menu > ul > li > ul');
 const headerbar = document.querySelectorAll('.hd_wrap');
 const languegeBtn = document.querySelector('.hd_wrap .gnb_menu .lang .arrow');
 openhamBtn.addEventListener('click', openHam, false);
@@ -49,18 +49,17 @@ function headerbarToggle() {
 function openGnb(e) {
   e.preventDefault();
   if (e.target.tagName !== 'A') return;
-
-  for (let i = 0; i < gnbA.length; i++) {
-    gnbA[i].classList.remove('on');
-    gnbsecondUl[i].classList.remove('on');
-  }
-
-  let targetName = e.target.classList.item(0);
-    e.target.classList.add('on');
-    for (let i = 0; i < gnbsecondUl.length; i++) {
-      if(gnbsecondUl[i].classList.contains(targetName)) {
-        gnbsecondUl[i].classList.add('on');
-      }
+  
+  if(e.target.classList.contains('on')) {
+    e.target.classList.remove('on');
+    e.target.nextElementSibling.classList.remove('on');
+  } else {
+    for (let i = 0; i < gnbA.length; i++) {
+      gnbA[i].classList.remove('on');
+      gnbOpenUl[i].classList.remove('on');
     }
+    e.target.classList.add('on');
+    e.target.nextElementSibling.classList.add('on');
+  }
 }
 
