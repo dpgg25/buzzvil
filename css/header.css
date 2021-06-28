@@ -47,7 +47,7 @@ header .m_layout .gnb_wrap {
   left: -100%;
   background-color: #fff;
   transition: all 0.3s;
-  overflow: scroll;
+  overflow: auto;
 }
 header .m_layout .gnb_wrap.on {
   left: 0;
