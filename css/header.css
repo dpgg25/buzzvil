@@ -273,12 +273,28 @@ header .gnb_menu_bottom .lang span {
     display: -ms-flexbox;
     display: flex;
     margin-left: 15px;
+  }  
+  header .gnb_wrap > ul > li > a, header .gnb_menu > ul > li > a {
+    padding: 30px 25px;
   }
+  /* header .gnb_wrap > ul > li > a::after, header .gnb_menu > ul > li > a::after {
+    content: '.';
+    display: block;
+    position: absolute;
+    top: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 35px;
+    color: #f44336;
+  }
+  header .gnb_wrap > ul > li > a:hover::after, header .gnb_menu > ul > li > a:hover::after {
+    display: block;
+  } */
   header .hd_wrap.on .gnb_wrap > ul > li > a, header .hd_wrap.on .gnb_menu > ul > li > a {
     color: #222;
   }
-  header .gnb_wrap ul li >  a {
-    padding: 0 25px;
+  header .hd_wrap.on .gnb_wrap > ul > li > a:hover, header .hd_wrap.on .gnb_menu > ul > li > a:hover {
+    color: #f44336;
   }
   header .gnb_wrap > ul > li > ul {
     display: none;

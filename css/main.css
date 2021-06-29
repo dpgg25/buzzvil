@@ -343,7 +343,7 @@ main .pc_img {
     display: none;
   }
   .main_visual {
-    height: 100vh;
+    height: 65vh;
   }
   .main_visual > ul > li {
     height: 100%;
