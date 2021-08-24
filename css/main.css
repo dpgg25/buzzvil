@@ -170,6 +170,7 @@ main .pc_img {
   margin-top: 10vw;
   width: 65%;
 }
+main > .m_layout {height: 100vh;}
 .main_ad {
   position: relative;
   width: 100%;
@@ -284,8 +285,11 @@ main .pc_img {
 }
 
 @media screen and (min-width:771px) and (max-width:1079px) {
-  main .pc_img {
+  main .pc_layout {
     display: none;
+  }  
+  main .m_layout {
+    display: block;
   }
   .main_visual .text_box {
     width: 100%;
@@ -330,15 +334,9 @@ main .pc_img {
 }
 
 @media screen and (min-width:1080px) {
-  main .pc_layout {
-    display: block;
-  }  
-  main .m_layout {
-    display: none;
-  }
   main .pc_img {
     display: block;
-  }  
+  }
   main .m_img {
     display: none;
   }
@@ -395,7 +393,7 @@ main .pc_img {
   }
   .main_reward .img_box {
     position: absolute;
-    bottom: 0;
+    top: 21px;
     right: 0;
     width: unset;
     text-align: unset;
@@ -404,5 +402,24 @@ main .pc_img {
   .main_reward .img_box > img {
     width: 395px;
     margin-top: 70px;
+    position: absolute;
+    right: 0;
   }
-}
+  .main_ad {padding-top: 75%; overflow: hidden;min-width: unset;}
+  .main_ad .img_wrap {top: -10%}
+  .main_ad .img_wrap > img {display: none; min-width: unset;}
+  .main_ad .img_wrap > img.on {display: block;}
+  .main_ad .text_wrap {top: 25%; height: 200px;}
+  .main_ad .text_wrap > h2 {color: #fff; font-size: 52px; margin-bottom: 25px;}
+  .main_ad .text_wrap > h2 > strong {color: #fff; font-size: 52px; font-weight: bold;}
+  .main_ad .text_wrap > p {font-size: 18px; opacity: 1; margin-bottom: 250px;}
+  .main_ad > ul {position: absolute; left: 0; top: 0; width: 100%; height: 100%;}
+  .main_ad > ul > li {width: 33.333333%; height: 92%; float: left; opacity: 0.4; position: unset; left: unset; top: unset; display: flex; align-items: flex-end; justify-content: center;}
+  .main_ad > ul > li:hover {opacity: 1; transition: all 0.5s ease-in;}
+  .main_ad > ul > li .hover_text_wrap {position: absolute; top: 45%; text-align: center;}
+  .main_ad > ul > li .hover_text_wrap > img {width: 80px; margin-bottom: 35px;}
+  .main_ad > ul > li .hover_text_wrap > h4 {font-size: 28px; color: #fff; font-weight: 500; line-height: 1.35;}
+  .main_ad > ul > li .hover_text_wrap > p {display: none; margin-top: 25px; font-size: 16px; font-weight: 300; line-height: 1.6; color: #fff;}
+  .main_ad > ul > li .hover_text_wrap > button {display: none; width:38px; height: 38px; background-color: #f44336; border-radius: 50%; margin-top: 25px;}
+  .main_ad > ul > li .hover_text_wrap > button > img {width: 8px;}
+  .main_ad > ul > li.on .hover_text_wrap > p, .main_ad > ul > li.on .hover_text_wrap > button {display: block;}
